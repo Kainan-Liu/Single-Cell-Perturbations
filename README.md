@@ -8,7 +8,7 @@ selected 144 compounds(2--dabrfenib and belinostat as postive controls and DMSO 
 <img width="1565" alt="inbox%2F4308072%2Fdbce2b5e0a2b8b9691502b31c5feb5b6%2FScreenshot 2023-08-25 at 6 20 53 PM" src="https://github.com/Kainan-Liu/Single-Cell-Perturbations/assets/146005327/72f3a46b-12c4-463d-a837-9dcd45e3409f">
 
 
-		The plate contains 96 wells, each well contains PBMCs from a donor(each well contains cells belonging to all cell types), 72 wells--compound, 16--positive controls, 8--negative controls, The full dataset comprises 2 different compound plates per donor for a total of 6 plates and 350 cells per well
+The plate contains 96 wells, each well contains PBMCs from a donor(each well contains cells belonging to all cell types), 72 wells--compound, 16--positive controls, 8--negative controls, The full dataset comprises 2 different compound plates per donor for a total of 6 plates and 350 cells per well
 
 Why introduce two positive controls and negative controls? One reason is that when we cell multiplexing(pool all samples in each row into a single pool for sequencing), two positive controls and one negative control in each row of the plate is to allow us to **account for this source** of noise when we calculate differential expression.
 
@@ -39,6 +39,8 @@ Modelling differential expression, predict the gene expression differential data
 ### Evaluation Metric
 
 Mean Rowwise Root Mean Squared Error(MRRMSE)
+![image-20231016214521034](https://github.com/Kainan-Liu/Single-Cell-Perturbations/assets/146005327/04d5ad6f-60ae-45be-8ab7-62fe230b7434)
+
 
 i: represent the cells, and j:  represent the genes
 
