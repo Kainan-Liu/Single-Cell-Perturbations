@@ -21,10 +21,10 @@ class nnRegression(nn.Module):
         super(nnRegression,self).__init__()
         self.input_size = input_train.shape[1]
         self.output_size = output_train.shape[1]
-        self.pred = nn.Sequential(nn.Linear(self.input_size, 64),  #放到高维空间好眼熟
+        self.pred = nn.Sequential(nn.Linear(self.input_size, 64),  #如果用one hot encoder的话，因为处理完features从两维变成了一百多维
                                      nn.BatchNorm1d(64),
                                      nn.ReLU(),
-                                     nn.Linear(64, 256),
+                                     nn.Linear(64, 256),     #所以可以把前面注释掉，直接从这里的64改成self.input_size训练就好
                                      nn.BatchNorm1d(256),
                                      nn.ReLU(),
                                      nn.Linear(256, 512),
