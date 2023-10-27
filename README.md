@@ -12,13 +12,12 @@ The plate contains 96 wells, each well contains PBMCs from a donor(each well con
 
 Why introduce two positive controls and negative controls? One reason is that when we cell multiplexing(pool all samples in each row into a single pool for sequencing), two positive controls and one negative control in each row of the plate is to allow us to **account for this source** of noise when we calculate differential expression.
 
-阳性对照组化合物对细胞的gene expression影响较大，而阴性对照组是其他化合物的solvent?主要的作用是calculate differential gene expression时的对照(reference)-- there is no DE data for the DMSO sample, because it is the negative control. All DE output is calculated in reference to the DMSO, i.e. the DE analysis asks "how confident am I that each gene increased or decreased relative to DMSO due to the compound treatment".
+there is no DE data for the DMSO sample, because it is the negative control. All DE output is calculated in reference to the DMSO, i.e. the DE analysis asks "how confident am I that each gene increased or decreased relative to DMSO due to the compound treatment".
 
 ### Data splits
 
 - Training dataset: All compounds in T, NK cells and 10% of the compounds in B and Myeloid cells
 - Testing dataset: randomly chosen compounds in B and Myeloid cells
-- 训练数据集囊括了所有测试数据集上的compound/cell_type pair
 
 ### Main dataset
 
