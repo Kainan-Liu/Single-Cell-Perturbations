@@ -63,9 +63,9 @@ class Preprocess:
 
         # step 3: generate the embedding based on the union_id
         if vocab_size is None:
-            vocab_size = max(len(features_train_encoded["union_id"])) + 2
+            vocab_size = max(features_train_encoded["union_id"]) + 2
         else:
-            assert vocab_size > max(len(features_train_encoded["union_id"])) + 2
+            assert vocab_size > max(features_train_encoded["union_id"]) + 2
 
         emb_func = nn.Embedding(num_embeddings=vocab_size, embedding_dim=hidden_size, padding_idx=0)
         train_embedding = emb_func(torch.LongTensor(features_train_encoded["union_id"]).reshape(-1, 1))
