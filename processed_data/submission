@@ -1,0 +1,3 @@
+Submission
+版本1.用label encoder来处理数据，模型是nnRegression（meanRmse loss=0.9913）
+	2.用one hot encoder来处理数据，模型是nnRegression（meanRmse loss=0.6768）
